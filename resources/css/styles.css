@@ -16,6 +16,7 @@ header {
     grid-template-columns: repeat(12, 1fr);
     justify-items: center;
     align-items: center;
+    z-index: 2;
 }
 
 
@@ -158,13 +159,29 @@ a {
       opacity: 0;
     }
     60% {
-      transform: scale(1.2);
+      transform: scale(1.1);
       opacity: 1;
     }
     100% {
       transform: scale(1);
     }
   }
+
+  @keyframes slidein {
+    0% {
+        margin-left:-2500px;
+        opacity:0;
+        z-index: 1; }
+    20% {
+        margin-left:-2500px;
+        opacity: 100;
+        z-index: 1; }
+    35% { margin-left:0px;
+        z-index: 1; }
+    100% { margin-left:0px;
+        z-index: 1; }
+}
+
 
 #work1 {
     grid-column: 1/2;
@@ -315,6 +332,21 @@ footer {
     grid-row: 3/4;
 }
 
+.uni-group1 {
+    animation: slidein 4s ease-in;
+    visibility: visible;
+}
+
+.uni-group2 {
+    animation: slidein 5s ease-in;
+    visibility: visible;
+}
+
+.uni-group3 {
+    animation: slidein 6s ease-in;
+    visibility: visible;
+}
+
 .uni-logo {
     float:left;
     width: 10vw;
@@ -327,6 +359,27 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     padding-left: 0;
+}
+
+.skill-animation {
+    display: flex;
+    align-items: center;
+}
+
+#sql-animation {
+    animation: slidein 6s ease-in;
+}
+#python-animation {
+    animation: slidein 7s ease-in;
+}
+#js-animation {
+    animation: slidein 8s ease-in;
+}
+#css-animation {
+    animation: slidein 9s ease-in;
+}
+#html-animation {
+    animation: slidein 10s ease-in;
 }
 
 #logo-tag {
@@ -551,9 +604,10 @@ footer {
         height: 30vh;
     }
     
-    .banner-text-container h3{
+    .banner-text-container h3 {
         font-size: 2vw;
     }
+
     #banner-button {
         width: 100%;
         margin-top: 0;
