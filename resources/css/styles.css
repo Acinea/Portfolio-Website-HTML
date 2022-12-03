@@ -279,10 +279,48 @@ footer {
 
 }
 
-.about-container img {
+#portrait {
     float:right;
     height:100%;
 }
+
+.uni-list {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,1fr);
+    align-items: center;
+    padding-left: 1%;
+    row-gap: 20%;
+}
+
+#codecademy-grid {
+    display: inline-flex;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/2
+}
+
+#rowan-grid {
+    display: inline-flex;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding-left: 1%;
+}
+
+#tcnj-grid {
+    display: inline-flex;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.uni-logo {
+    float:left;
+    width: 10vw;
+    height: auto;
+}
+
 
 .skill-list {
     display:flex;
@@ -293,6 +331,11 @@ footer {
 
 #logo-tag {
     list-style: none;
+}
+
+#uni-tag {
+    list-style: none;
+    padding-left: 2%;
 }
 
 .icon-logo {
@@ -507,10 +550,14 @@ footer {
         padding-top: 15vh;
         height: 30vh;
     }
-
+    
+    .banner-text-container h3{
+        font-size: 2vw;
+    }
     #banner-button {
         width: 100%;
         margin-top: 0;
+        font-size: 14px;
     }
 
     .my-work-title {
@@ -537,10 +584,15 @@ footer {
     }
 
     .about-container p {
-        width: 100vw;
+        width: 100%;
     }
+
     #portrait {
         display: none;
+    }
+
+    .uni-logo {
+        width: 25vw;
     }
 
     .about-text-container {
